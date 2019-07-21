@@ -2,10 +2,13 @@
   "name": "desafio04",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://guimalonso.github.io/gostack-desafio04-facebook/",
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode development",
-    "dev": "webpack-dev-server --mode development"
+    "dev": "webpack-dev-server --mode development",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
@@ -21,6 +24,7 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
